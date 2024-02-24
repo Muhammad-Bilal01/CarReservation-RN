@@ -9,7 +9,11 @@ const Drawer = createDrawerNavigator();
 function Main() {
   return (
     <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}>
-      <Drawer.Screen name="Drawer" component={DrawerScreen} />
+      <Drawer.Screen
+        name="Drawer"
+        component={DrawerScreen}
+        options={{title: 'Spot Vendor', headerShown: false}}
+      />
     </Drawer.Navigator>
   );
 }
