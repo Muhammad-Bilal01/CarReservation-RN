@@ -2,8 +2,10 @@ import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {BLACK_COLOR, WHITE_COLOR} from '../../../../utils/Colors';
 import {moderateScale, moderateVerticalScale} from 'react-native-size-matters';
+import {useNavigation} from '@react-navigation/native';
 
 function Home() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Dashboard</Text>
@@ -16,7 +18,10 @@ function Home() {
           gap: moderateScale(20),
         }}>
         <View style={{gap: moderateScale(20)}}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('AddSpot');
+            }}>
             <Image source={require('../../../../res/images/add_spot.png')} />
           </TouchableOpacity>
           <TouchableOpacity>
