@@ -29,6 +29,8 @@ function Signup() {
   const signUp = () => {
     if (toggleUser === 'vendor') {
       navigation.navigate('VendorNavigation');
+    } else if (toggleUser === 'user') {
+      navigation.navigate('UserNavigation');
     }
   };
 

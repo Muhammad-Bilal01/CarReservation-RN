@@ -8,8 +8,10 @@ import {
 } from 'react-native-size-matters';
 import CustomSolidButton from '../../../components/CustomSolidButton';
 import {launchImageLibrary} from 'react-native-image-picker';
+import {useNavigation} from '@react-navigation/native';
 
 function AddCNIC() {
+  const navigation = useNavigation();
   const [image, setImage] = useState('');
 
   const addImage = async () => {
@@ -40,7 +42,12 @@ function AddCNIC() {
         )}
       </Pressable>
       <View style={styles.btnContainer}>
-        <CustomSolidButton title={'Complete Registration'} />
+        <CustomSolidButton
+          title={'Complete Registration'}
+          onPress={() => {
+            navigation.replace('DashboardNavigator');
+          }}
+        />
       </View>
     </View>
   );

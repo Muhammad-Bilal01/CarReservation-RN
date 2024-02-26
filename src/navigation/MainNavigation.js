@@ -5,6 +5,7 @@ import Splash from '../screens/Splash';
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
 import VendorNavigation from './VendorNavigation';
+import UserNavigation from './UserNavigation';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,11 @@ function MainNavigation() {
         <Stack.Screen
           name="VendorNavigation"
           component={VendorNavigation}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="UserNavigation"
+          component={UserNavigation}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

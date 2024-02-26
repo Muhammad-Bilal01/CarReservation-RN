@@ -3,6 +3,7 @@ import React from 'react';
 import VendorDetailsForm from '../screens/VendorScreens/VendorDetails/VendorDetailsForm';
 import VendorBankDetailsForm from '../screens/VendorScreens/VendorDetails/VendorBankDetailsForm';
 import AddCNIC from '../screens/VendorScreens/VendorDetails/AddCNIC';
+import VendorDashboardNavigator from './VendorDashboardNavigator';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,11 @@ function VendorNavigation() {
         name={'AddCNIC'}
         component={AddCNIC}
         options={{title: 'Spot Holder'}}
+      />
+      <Stack.Screen
+        name="DashboardNavigator"
+        component={VendorDashboardNavigator}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );
