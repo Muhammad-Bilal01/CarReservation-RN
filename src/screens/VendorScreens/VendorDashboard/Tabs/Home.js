@@ -24,15 +24,24 @@ function Home() {
             }}>
             <Image source={require('../../../../res/images/add_spot.png')} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('DeleteSpot');
+            }}>
             <Image source={require('../../../../res/images/delete_spot.png')} />
           </TouchableOpacity>
         </View>
         <View style={{gap: moderateScale(20)}}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('UpdateSpot');
+            }}>
             <Image source={require('../../../../res/images/update_spot.png')} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('ViewAllSpot');
+            }}>
             <Image source={require('../../../../res/images/view_spot.png')} />
           </TouchableOpacity>
         </View>
